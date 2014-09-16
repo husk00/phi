@@ -1,0 +1,90 @@
+#include "ofApp.h"
+
+//--------------------------------------------------------------
+void ofApp::setup(){
+	//ofSetOrientation(OF_ORIENTATION_90_RIGHT);
+	  ofBackground(0,0,0);
+	  ofSetFrameRate(60);
+	  ofPoint center(500,350);
+
+	  //load interface images
+	  banner.loadImage("images/banner.jpg");
+	  colsx.loadImage("images/colsx.jpg");
+	  coldx.loadImage("images/coldx.jpg");
+	  fondocentral.loadImage("images/fondocentral.jpg");
+
+	  // crear las slices
+	  for(int i=0; i<8; i++){
+	  slice[i].lineTo(center);
+	  slice[i].arc(center,280,280,(i*45),(i*45)+45, 100);
+	  }
+	  //convertir slices en ofPath para que se puedan llenar
+	  for(int j = 0; j < 8; j++){
+	    for( int i = 0; i < slice[j].getVertices().size(); i++) {
+	        if(i == 0) {
+	            path[j].newSubPath();
+	            path[j].moveTo(slice[j].getVertices()[i] );
+	        } else {
+	            path[j].lineTo( slice[j].getVertices()[i] );
+	        }
+	    }
+	      path[j].close();
+	      path[j].simplify();
+
+	  }
+}
+
+//--------------------------------------------------------------
+void ofApp::update(){
+
+}
+
+//--------------------------------------------------------------
+void ofApp::draw(){
+
+}
+
+//--------------------------------------------------------------
+void ofApp::keyPressed(int key){
+
+}
+
+//--------------------------------------------------------------
+void ofApp::keyReleased(int key){
+
+}
+
+//--------------------------------------------------------------
+void ofApp::mouseMoved(int x, int y ){
+
+}
+
+//--------------------------------------------------------------
+void ofApp::mouseDragged(int x, int y, int button){
+
+}
+
+//--------------------------------------------------------------
+void ofApp::mousePressed(int x, int y, int button){
+
+}
+
+//--------------------------------------------------------------
+void ofApp::mouseReleased(int x, int y, int button){
+
+}
+
+//--------------------------------------------------------------
+void ofApp::windowResized(int w, int h){
+
+}
+
+//--------------------------------------------------------------
+void ofApp::gotMessage(ofMessage msg){
+
+}
+
+//--------------------------------------------------------------
+void ofApp::dragEvent(ofDragInfo dragInfo){ 
+
+}
