@@ -1,0 +1,6 @@
+set solib-search-path /home/husk/src/of/of_v0.8.3_android_release/examples/android/androidPolygonExample/obj/local/x86:/home/husk/src/of/of_v0.8.3_android_release/examples/android/androidPolygonExample/libs/x86
+directory /home/husk/src/android-ndk-r9b/platforms/android-17/arch-arm/usr/include
+directory /home/husk/src/of/of_v0.8.3_android_release/examples/android/androidPolygonExample/src
+directory /home/husk/src/android-ndk-r9b/sources/cxx-stl/system
+directory /home/husk/src/of/of_v0.8.3_android_release/examples/android/androidPolygonExample/libs/x86
+
